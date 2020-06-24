@@ -2342,7 +2342,6 @@ static UniValue getlicensedminers(const JSONRPCRequest& request)
                 },
             }.ToString());
 
-    LOCK(cs_main);
     UniValue result(UniValue::VARR);
     for (const auto& license : minerLicenses.GetLicenses()) {
     	UniValue licenseObj(UniValue::VOBJ);
